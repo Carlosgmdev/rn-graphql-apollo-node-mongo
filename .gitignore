@@ -1,0 +1,71 @@
+# Dependencias y cachés de JavaScript (backend y mobile)
+node_modules/
+.npm/
+.cache/
+.eslintcache
+*.tsbuildinfo
+
+# Variables de entorno locales; conservar las plantillas
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Credenciales locales
+/.aws/
+*.keystore
+*.jks
+*.p12
+*.p8
+*.mobileprovision
+# Conservar la clave de desarrollo compartida de la plantilla para Android debug
+!mobile/android/app/debug.keystore
+
+# Logs, cobertura y archivos temporales
+*.log
+coverage/
+/tmp/
+*.swp
+*.swo
+*.orig
+
+# Sistema operativo y configuración local del IDE
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+
+# React Native / Metro
+.metro-health-check*
+.watchman-cookie-*
+*.jsbundle
+
+# Android: resultados de compilación y configuración del SDK local
+mobile/android/.gradle/
+mobile/android/.kotlin/
+mobile/android/local.properties
+mobile/android/**/build/
+mobile/android/**/.cxx/
+mobile/android/**/.externalNativeBuild/
+*.apk
+*.aab
+*.hprof
+
+# iOS: dependencias, compilaciones y configuración personal de Xcode
+mobile/ios/Pods/
+mobile/ios/build/
+mobile/ios/DerivedData/
+mobile/ios/.xcode.env.local
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+*.ipa
+*.dSYM/
+
+# Gems instaladas localmente por Bundler
+mobile/.bundle/
+mobile/vendor/bundle/
+
+# Se versionan package-lock.json, Gemfile.lock y Podfile.lock,
+# así como gradlew, gradle-wrapper.jar y los proyectos nativos.

@@ -1,0 +1,51 @@
+# Pega UNA operación en http://localhost:4000/graphql y ejecútala.
+query Board {
+  tasks {
+    id
+    title
+    status
+    assignee {
+      id
+      name
+      role
+    }
+  }
+  users {
+    id
+    name
+  }
+}
+
+# Variables: { "id": "t1" }
+query TaskDetail($id: ID!) {
+  task(id: $id) {
+    id
+    title
+    status
+    createdAt
+    assignee {
+      name
+    }
+  }
+}
+
+# Variables: { "input": { "title": "Practicar GraphQL", "assigneeId": "u1" } }
+mutation CreateTask($input: CreateTaskInput!) {
+  createTask(input: $input) {
+    id
+    title
+    status
+    assignee {
+      id
+      name
+    }
+  }
+}
+
+# Variables: { "id": "t1", "status": "DONE" }
+mutation SetTaskStatus($id: ID!, $status: TaskStatus!) {
+  setTaskStatus(id: $id, status: $status) {
+    id
+    status
+  }
+}

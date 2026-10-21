@@ -1,0 +1,19 @@
+{
+  "name": "graphql-interview-lab",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.11.0"
+  },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "backend": "npm --prefix backend run dev",
+    "start": "npm --prefix mobile start",
+    "android": "npm --prefix mobile run android --",
+    "android:reverse": "adb reverse tcp:4000 tcp:4000 && adb reverse tcp:8081 tcp:8081",
+    "ios": "npm --prefix mobile run ios --",
+    "test": "npm --prefix backend test && npm --prefix mobile test -- --runInBand",
+    "test:domain": "node --test backend/test/store.test.js",
+    "typecheck": "npm --prefix mobile run typecheck"
+  }
+}
